@@ -122,7 +122,7 @@ public class Gui implements Listener {
 
     private void ask(Player p, String prompt, Consumer<String> cb) {
         pending.put(p.getUniqueId(), cb);
-        Bukkit.getScheduler().runTask(pl, p::closeInventory);
+        Bukkit.getScheduler().runTask(pl, () -> p.closeInventory());
         p.sendMessage(t(prompt + " &7(tapez &cannuler&7 pour annuler)"));
     }
 
