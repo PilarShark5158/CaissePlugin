@@ -1,0 +1,19 @@
+name: Caisse
+version: 1.0
+main: fr.caisse.CaissePlugin
+api-version: '26.2'
+description: Plugin de caisses avec clefs, gains configurables et interface graphique
+
+commands:
+  caisse:
+    description: Liste des caisses
+    permission: caisse.use
+  caisseadmin:
+    description: Administration des caisses
+    permission: caisse.admin
+
+permissions:
+  caisse.use:
+    default: true
+  caisse.admin:
+    default: op
